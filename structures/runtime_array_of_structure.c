@@ -4,18 +4,16 @@
 /**
  * main - processes structure in c
  * compile time initialization practice of structures in c
- * struct students: structure data type
+ * struct student: structure data type
  * Return: void
  */
 
 
 void main(void)
 {
-	int n = 0;
+	int n, i;
 	char end = 'y';
 	struct student s[1000];
-	char namex[20];
-	float mark;
 
 	while (end != 'n')
 	{
@@ -25,6 +23,7 @@ void main(void)
 		scanf("%s", s[n].name);
 		printf("enter score of student:");
 		scanf("%f", &s[n].score);
+		i++;
 		n++;
 		printf("enter another record? y/n:");
 		scanf("%s", &end);
