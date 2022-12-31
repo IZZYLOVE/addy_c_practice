@@ -3,7 +3,7 @@
 #include "struct.h"
 
 /**
- * main - processes structure in c
+ * main - processes structure and can handle max 1000 records
  * run time initialization practice of structures in c
  * this program initializes the variable for structure at run time
  * struct student: structure data type
@@ -15,11 +15,12 @@ void main(void)
 	system("clear");
 	int i, x, n;
 	char end = 'y';
-	struct student s[1000];
+	int j = 1000;
+	struct student s[j];
 	struct student *p;
 
 	p = s;
-	while (end != 'n')
+	while (end != 'n' && n < j)
 	{
 		(*p).s_n = n;
 		printf("iteration for n=%d\n", n);
@@ -39,7 +40,7 @@ void main(void)
 	}
 	printf("\n");
 	printf("\n");
-	printf("starting from  x=0\n");
+	printf("incrementing from  x=0\n");
 	p = &s[0];
 	for (; x < n;)
 	{
@@ -54,8 +55,8 @@ void main(void)
  */
 	printf("\n");
 	printf("\n");
-	printf("starting from  x=%d\n", x);
-	for (; x >= 0;)
+	printf("decrementing from  x=%d\n", x);
+	for (; x > 0;)
 	{
 		x--;
 		p--;
