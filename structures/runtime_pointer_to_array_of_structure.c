@@ -3,7 +3,8 @@
 #include "struct.h"
 
 /**
- * main - processes structure and can handle max 1000 records
+ * main - processes structure and
+ * can handle int type array size of 1000
  * run time initialization practice of structures in c
  * this program initializes the variable for structure at run time
  * struct student: structure data type
@@ -13,9 +14,9 @@
 void main(void)
 {
 	system("clear");
-	int i, x, n;
+	int i, x, n, j;
 	char end = 'y';
-	int j = 1000;
+	j = 1000;
 	struct student s[j];
 	struct student *p;
 
