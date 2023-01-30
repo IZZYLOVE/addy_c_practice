@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "struct.h"
+#include "myfunctions.h"
 
 /**
  * main - processes structure in c
@@ -11,20 +13,23 @@
 
 void main(void)
 {
-	int n, i;
+	int n, i, j;
 	char end = 'y';
-	struct student s[1000];
 
-	while (end != 'n')
+	printf("enter total number of students:");
+	scanf("%d", &i);
+	j = i;
+	struct student *s = (struct student *)malloc(i * sizeof(struct student));
+
+	for (n = 0; end != 'n' && n < j; n++)
 	{
 		s[n].s_n = n;
 
 		printf("enter name of student:");
-		scanf("%s", s[n].name);
+		s[n].name = myscanf();
 		printf("enter score of student:");
 		scanf("%f", &s[n].score);
 		i++;
-		n++;
 		printf("enter another record? y/n:");
 		scanf("%s", &end);
 		printf("info for s%d\n", n);

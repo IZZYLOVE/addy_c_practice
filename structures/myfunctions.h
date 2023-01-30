@@ -3,7 +3,10 @@
 
 int mystrlen(char *s);
 char *d_str_cat(char *d, char *s);
-char *myscanf(void);
+char *myscan_double(void);
+char *myscan_char(void);
+int *myscan_int(void);
+float *myscan_float(void);
 void *myarray(unsigned int size, char datatype);
 
 

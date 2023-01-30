@@ -9,15 +9,11 @@
 
 int main(void)
 {
-	char *d = (char *)malloc(2);
-	char *s = (char *)malloc(2);
-
+	char *d, *s;
 	printf("enter first string: ");
-	scanf("%s", d);
-	d = dmc_to_str_size(d);
+	d = myscanf();
 	printf("enter second string: ");
-	scanf("%s", s);
-	s = dmc_to_str_size(s);
+	s = myscanf();
 
 	d = d_str_cat(d, s);
 	printf("%s", d);
